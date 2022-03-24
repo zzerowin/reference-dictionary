@@ -98,4 +98,4 @@ class MyContainer implements Container {
   getClassName = () => this.className;
 }
 
-console.log('done');
+console.log('done')
