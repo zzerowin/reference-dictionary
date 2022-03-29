@@ -1,3 +1,4 @@
+// @ts-ignore
 import { v4 } from 'uuid';
 
 type UniqObject = {
