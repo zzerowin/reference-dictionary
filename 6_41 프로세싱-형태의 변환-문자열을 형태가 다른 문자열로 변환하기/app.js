@@ -31,4 +31,3 @@ const camelName2 = simpleCamel('PARK ZERO WIN');
 
 console.log(camelName1);
 console.log(camelName2);
-
