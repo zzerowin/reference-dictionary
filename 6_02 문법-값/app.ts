@@ -1,5 +1,6 @@
+
 enum Color {
-    Red, Blue, Green
+    Red = 1, Blue, Green
 }
 
-Color.Red;
+const red = Color.Red;
