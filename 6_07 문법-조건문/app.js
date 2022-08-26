@@ -1,4 +1,4 @@
-let age = 1;
+let age = 3;
 
 if (age === 1) {
   console.log(1);

@@ -1,5 +1,5 @@
-let x = 10;
 
+let x = 10;
 const y = 200;
 
 const obj = {
@@ -7,5 +7,6 @@ const obj = {
   width: 300,
 }
 
-obj.width = 300;
+obj.height = 300;
 
+console.log(obj);
