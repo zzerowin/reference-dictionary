@@ -6,7 +6,7 @@ function sum(a, b, ...args) {
   let s = 0;
 
   for (let i = 0; i < args.length; i++) {
-    s = s + args[i];
+    s += args[i]
   }
   return s;
 }
@@ -17,33 +17,37 @@ const sumV2 = (a, b, ...args) => {
   for (let i = 0; i < args.length; i++) {
     s = s + args[i];
   }
+
   return s;
 }
 
 const ten = (x, y) => {
-  return 100 + x;
+  return 100 + x + y;
 }
-ten(10, 20)
+
+console.log('ten 함수실행: ' + ten(1000, 2000));
 
 const result = myFn(10);
-const abcSum = sum(10, 20, 30, 40, 50, 60);
+console.log('myFn 함수실행: ' + result);
 
-console.log(abcSum);
+const abcSum = sum(10, 20, 30, 40, 50);
+console.log('sum 함수실행: ' + abcSum);
 
-const myFunV2 = function () {
+const myFnV2 = function () {
   return 100;
-};
+}
 
-const arr = [10, 20, 30, 40, 50]
+const arr = [10, 20, 30, 40, 50];
 
-myFunV2();
-sum.call(null, 10, 20, 30);
+myFnV2();
+sum.call(null, 10, 20, 30, 40);
 sum.apply(null, arr);
 
 (function () {
-  console.log('즉시 실행 함수 실행')
-})();
+  console.log('즉시 실행 함수 실행!');
+}());
 
+// 제너레이터(생성기)
 function* gen() {
   yield 10;
   yield 20;
@@ -51,15 +55,11 @@ function* gen() {
 }
 
 const g = gen();
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
 
-
-g.next();
-g.next();
-g.next();
-
+// 비동기
 async function myTask() {
 
 }
-
-
-
