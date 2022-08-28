@@ -6,16 +6,16 @@ type MyObject = {
   getBloodType: () => string;
 }
 
-const obj = {
-  name: 'zeroiwn',
+const obj: MyObject = {
+  name: 'Yeoung Seung',
   age: 25,
   getFamilyName: function () {
-    return 'park';
+    return 'Park';
   },
-  getLastName: () => 'park',
+  getLastName: () => 'Park',
   getBloodType() {
-    return 'A'
-  }
+    return 'A';
+  },
 };
 
 obj.name;
@@ -24,35 +24,35 @@ delete obj.name;
 obj.getFamilyName();
 obj.getBloodType();
 
-class Parson {
+class Person {
   _bloodType: string;
 
   constructor(bloodType: string) {
-    this.bloodType = bloodType;
+    this._bloodType = bloodType;
   }
 
   set bloodType(atype: string) {
-    if (atype === 'A' || atype === 'B' || atype === 'O' || atype === 'AB') {
+    if (atype === 'B' || atype === 'A' || atype === 'O' || atype === 'AB') {
       this._bloodType = atype;
     }
   }
 
   get bloodType() {
-    return `${this._bloodType} 형`;
+    return this._bloodType;
   }
 }
 
-const p1 = new Parson('A');
+const p1 = new Person('A');
 
 p1.bloodType;
 p1.bloodType = 'C';
 
 const myObj = Object.create(null, {
   name: {
-    value: 'zerowin ',
+    value: 'Park Yeoung Seung',
     writable: false,
-    configurable: true
+    configurable: false
   }
-});
+})
 
 delete myObj.name;
