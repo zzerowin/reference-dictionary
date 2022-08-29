@@ -11,30 +11,28 @@ function makeInfiniteEnergyGenerator() {
   };
 }
 
-function * infiniteEnergyGenerator() {
+function* infiniteEnergyGenerator() {
   let energy = 1;
-  while(true){
+  while (true) {
     const booster = yield energy;
 
-    if(booster){
+    if (booster) {
       energy += booster;
     } else {
       energy++;
     }
   }
-
-  return;
 }
 
+/*
+const energy = makeInfiniteEnergyGenerator();
 
-// const energy = makeInfiniteEnergyGenerator();
-//
-// for (let i = 0; i < 5; i++) {
-//   console.log(energy());
-// }
-//
-// console.log(energy(5));
+for (let i = 0; i < 5; i++) {
+  console.log(energy());
+}
 
+console.log(energy(5));
+*/
 
 const energyGenerator = infiniteEnergyGenerator();
 
@@ -43,19 +41,3 @@ for (let i = 0; i < 5; i++) {
 }
 
 console.log(energyGenerator.next(5));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
