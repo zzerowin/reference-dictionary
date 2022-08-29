@@ -1,33 +1,31 @@
 function delay(ms:number) : Promise<string> {
-  // @ts-ignore
   return new Promise<string>((resolve, reject) => {
     setTimeout(() => {
-      if(Math.floor(Math.random() * 10) % 2 === 0) {
-        resolve('success');
+      if(Math.floor(Math.random() *10) % 2 ===0){
+        resolve(' 성공');
       } else {
-        reject('failure');
+        reject(' 실패');;
       }
     }, ms);
   });
 }
 
 delay(3000)
-  .then((result: string) => {
+  .then((result: string) =>{
     console.log('done promise' + result);
   })
   .catch((error: string) =>{
     console.error('fail promise!' + error);
   });
 
-// @ts-ignore
-const main = async () => {
+async function main() {
   try {
     console.log('start job')
     const result = await delay(3000);
-    console.log('done async!' + result);
+    console.error('done async!' + result);
   } catch (e) {
     console.error('fail async' + e);
   }
-};
+}
 
 main();
