@@ -1,9 +1,8 @@
 
 const arr = ['a', 'b', 'c', 'd'];
-
 // console.log(arr[1]);
 
-for ( let i = 0; i < arr.length; i++) {
+for (let i = 0; i < arr.length; i++) {
   console.log(arr[i]);
 }
 
@@ -26,14 +25,14 @@ for (const item of arr) {
 }
 
 for (const index in arr) {
-  console.log(arr[index])
+  console.log(arr[index]);
 }
 
 const obj = {
   color: 'red',
   width: 200,
   height: 200,
-};
+}
 
 for (const key in obj) {
   console.log(key);
