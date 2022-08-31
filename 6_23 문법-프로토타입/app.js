@@ -1,7 +1,7 @@
 
 const c1 = {
   name: 'C1',
-  color: 'red'
+  color: 'red',
 }
 
 const c2 = {
@@ -23,14 +23,17 @@ console.log(c3);
 
 console.log(c1.width);
 
-function Foo(name) {
-  this.name = name
+function Foo(name, age) {
+  this.name = name;
+  this.age = age;
   this.__proto__ = Foo.prototype;
 }
 
-Foo.prototype.lastName = 'Woowa';
+Foo.prototype.lastName = '우와';
 
-const f = new Foo('Park young seung');
+const f = new Foo('박영승', 23);
 
-console.log(f);
+console.log(f.name);
+console.log(f.age)
 console.log(f.lastName);
+
