@@ -1,10 +1,11 @@
 
+
 function increment() {
   let saveNumber = 1;
 
-  return function () {
+  return () => {
     return saveNumber++;
-  }
+  };
 }
 
 const inc = increment();
@@ -12,3 +13,4 @@ const inc = increment();
 console.log(inc());
 console.log(inc());
 console.log(inc());
+
