@@ -26,14 +26,13 @@ CartV1.prototype.clearCart = function (item) {
   this.currentId = 0;
 };
 
-const shoppingCarV1 = new CartV1();
+const shoppingCartV1 = new CartV1();
 
-shoppingCarV1.addItem(CartV1.createItem('수박', 8000));
-shoppingCarV1.addItem(CartV1.createItem('사과', 12000));
-shoppingCarV1.addItem(CartV1.createItem('두부', 2000));
+shoppingCartV1.addItem(CartV1.createItem('수박', 8000));
+shoppingCartV1.addItem(CartV1.createItem('사과', 12000));
+shoppingCartV1.addItem(CartV1.createItem('두부', 2000));
 
-console.log(shoppingCarV1.cart);
-
+console.log(shoppingCartV1.cart);
 
 class CartV2 {
   static createItem = (name, price) => ({
@@ -50,7 +49,7 @@ class CartV2 {
 
   getNewId = () => {
     this.currentId++;
-    return this.currentId
+    return this.currentId;
   }
 
   addItem = item => {
@@ -73,18 +72,3 @@ shoppingCartV2.addItem(CartV2.createItem('사과', 12000));
 shoppingCartV2.addItem(CartV2.createItem('두부', 2000));
 
 console.log(shoppingCartV2.cart);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
