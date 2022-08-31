@@ -33,15 +33,15 @@ class Person {
   getName = () => this.name;
 }
 
-const p1 = new Person('Park youngseung', 21);
+const p1 = new Person('Park yeoungseung', 25);
 
 p1.getAge();
 
 const myAge = p1.getAge;
-
-myAge();
+console.log(myAge())
 
 p1.getName();
+console.log(p1.getName());
 
 const x = p1.getName;
-x();
+console.log(x());
