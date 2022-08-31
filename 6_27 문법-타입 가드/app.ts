@@ -1,18 +1,18 @@
-function doubleTypeFunction(a: number | string) {
+function doubleTypeFunc(a: number | string) {
   if (typeof a === 'string') {
     return a.replace('x', 'X');
   }
 
-  // 타입스크립트 빨간 밑줄
-  // return a.replace('Y', 'y');
+  // @ts-ignore
+  return a.replace('Y', 'y');
 }
 
-doubleTypeFunction(10);
+// doubleTypeFunc(10);
 
 function foo(a?: number | null) {
   if (a === null) return;
 
-  console.log('display before')
+  console.log('display before');
   console.log(a?.valueOf());
   console.log('display after');
 }
@@ -28,4 +28,4 @@ function isFoo(arg: any): arg is Foo {
   return arg.foo !== undefined;
 }
 
-console.log(isFoo({ foo: 'ok', common: 'wow', active: false}));
+console.log(isFoo({ foo: 'ok', common: 'wow' }));
