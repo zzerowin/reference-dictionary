@@ -2,23 +2,23 @@ const p = new Promise((resolve, reject) => {
   // resolve('OK');
   setTimeout(() => {
     resolve('OK');
-  }, 2000)
-})
+  }, 2000);
+});
 
-p.then(function (ok) {
+p.then((ok) => {
   console.log('첫번째 성공');
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('두번째 성공');
-    }, 3000)
+    }, 3000);
   })
 })
-  .then(function (ok) {
+  .then((ok) => {
     console.log(ok);
   })
-  .catch(function (error) {
-    console.log(error);
-  });
+  .catch((error) => {
+  console.log(error);
+})
 
 function double(x) {
   return x * 2;
@@ -33,8 +33,9 @@ function calcValue(a, b, cb) {
 const x = double(100);
 const y = x;
 
-const r = calcValue(10, 20, (result) => {
+const r = calcValue(20, 30, (result) => {
   console.log(result);
 });
 const z = r;
+
 
