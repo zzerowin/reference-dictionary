@@ -14,7 +14,7 @@ abstract class Shape {
   protected _borderWidth: number;
   private action!: string;
 
-  constructor(borderWidth: number =0){
+  protected constructor(borderWidth: number = 0) {
     this._borderWidth = borderWidth;
   }
 
@@ -33,17 +33,17 @@ abstract class Shape {
   }
 }
 
-class Circle extends Shape{
-  private _radius: number;
+class Circle extends Shape {
+  private readonly _radius: number
   public name: string = 'Circle';
 
 
-  constructor(radius: number){
+  constructor(radius: number) {
     super();
     this._radius = radius;
   }
 
-  get radius(){
+  get radius() {
     return this._radius;
   }
 
@@ -51,10 +51,12 @@ class Circle extends Shape{
 }
 
 class Rect extends Shape {
-  private _width: number;
-  private _height: number;
+  private readonly _width: number;
+  private readonly _height: number;
 
-  constructor(width: number, height: number) {
+  public name: string = 'Rect';
+
+  constructor(width: number, height:number){
     super();
 
     this._width = width;
@@ -98,4 +100,4 @@ class MyContainer implements Container {
   getClassName = () => this.className;
 }
 
-console.log('done')
+console.log('done');
