@@ -1,4 +1,5 @@
-// [1, 2, 3, 4] = 2배
+
+// [1,2,3,4] => 2배
 
 const arr = [];
 
@@ -10,7 +11,7 @@ console.log(arr);
 
 const arr2 = [1, 2, 3, 4]
   .map(n => n * 3)
-  .filter(n => n & 2 !== 0)
+  .filter(n => n % 2 !== 0)
   .map(n => `<li>${n}</li>`)
 
 console.log(arr2);
