@@ -3,7 +3,7 @@ function main(){
   const CAPTURING_PHASE = true;
   const PHASE_NAME = ['NONE', 'CAPTURING', 'TARGET', 'BUBBLING']
 
-  function eventLogger({target, currentTarget, eventPhase}){
+  function eventLogger({ target, currentTarget, eventPhase }) {
     console.log(`${target.dataset.name}, ${currentTarget.dataset.name}, ${PHASE_NAME[eventPhase]}`);
   }
 
