@@ -8,8 +8,7 @@ type ObjType = {
   y: number;
 }
 
-const json = `{"x": 10, "y": 20}`;
-const obj: ObjType = JSON.parse(json) as ObjType;
+const json = `{ "x": 10, "y": 20 }`;
+const obj:ObjType = JSON.parse(json) as ObjType;
 
 add(obj.x, obj.y);
-
