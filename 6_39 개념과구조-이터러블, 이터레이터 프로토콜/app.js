@@ -1,3 +1,4 @@
+
 const myIterable = {};
 
 myIterable[Symbol.iterator] = function* () {
