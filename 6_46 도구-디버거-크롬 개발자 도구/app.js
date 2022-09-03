@@ -21,4 +21,3 @@ let winterPrice = discountPrice(10);
 
 console.log('여름 세일 - ' + summerPrice(567000));
 console.log('겨울 세일 - ' + winterPrice(567000));
-
